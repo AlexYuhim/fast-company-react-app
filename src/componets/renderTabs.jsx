@@ -1,5 +1,9 @@
+import React from 'react'
+import 'bootstrap-icons/font/bootstrap-icons.css'
+// import RenderIcons from './bootStrIcons'
+// import App from '../App'
+
 const RenderTabs = (prop) => {
-  console.log(prop)
   const classes = 'badge m-2 bg-'
 
   return prop[0].map((eventUsers) => (
@@ -18,6 +22,23 @@ const RenderTabs = (prop) => {
       <td>{eventUsers.profession.name}</td>
       <td>{eventUsers.completedMeetings}</td>
       <td>{eventUsers.rate}/5</td>
+      <td>
+        <button
+          onClick={() => {
+            prop.onhendelClik(eventUsers._id, eventUsers.status)
+          }}
+        >
+          <i
+            style={{ fontSize: '20px' }}
+            key={eventUsers._id}
+            className={`${
+              eventUsers.status !== true
+                ? 'bi bi-hand-thumbs-up'
+                : 'bi bi-hand-thumbs-down-fill'
+            }`}
+          />
+        </button>
+      </td>
       <td>
         <button
           key={eventUsers._id}

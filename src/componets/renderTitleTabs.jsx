@@ -1,3 +1,4 @@
+import React from 'react'
 const RenderTilteTab = () => {
   return (
     <tr>
@@ -6,6 +7,7 @@ const RenderTilteTab = () => {
       <th scope="col">Профессия</th>
       <th scope="col">Встретился раз</th>
       <th scope="col">Рейтинг</th>
+      <th scope="col"></th>
       <th scope="col"></th>
     </tr>
   )
