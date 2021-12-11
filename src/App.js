@@ -5,11 +5,10 @@ import FormatMassege from './componets/messeg'
 import api from './api'
 import Pagination from './componets/pagination'
 import { paginet } from './utils/paginet'
-// import RenderIcons from './componets/bootStrIcons'
 
-// import 'bootstrap-icons/font/bootstrap-icons.json'
 
 function App() {
+
   const [users, setUsers] = useState(api.users.fetchAll())
   const [count, setDiscrement] = useState(users.length)
   const [currentPage, setCurrentPage] = useState(1)
@@ -45,6 +44,7 @@ function App() {
   }
   if (users.length === 0) {
     return <h1 className="badge btn-danger m-2">Никто с тобой не тусанёт</h1>
+
   }
   return (
     <div>
@@ -57,7 +57,7 @@ function App() {
             onhendelClik={hendelClik}
             {...[userCrop]}
           />
-          {/* <RenderIcons onhendelClik={hendelClik} {...[users]} /> */}
+
         </tbody>
       </table>
       <Pagination

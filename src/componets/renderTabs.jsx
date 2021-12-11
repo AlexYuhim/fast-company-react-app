@@ -1,7 +1,5 @@
 import React from 'react'
 import 'bootstrap-icons/font/bootstrap-icons.css'
-// import RenderIcons from './bootStrIcons'
-// import App from '../App'
 
 const RenderTabs = (prop) => {
   const classes = 'badge m-2 bg-'
@@ -31,11 +29,10 @@ const RenderTabs = (prop) => {
           <i
             style={{ fontSize: '20px' }}
             key={eventUsers._id}
-            className={`${
-              eventUsers.status !== true
+            className={`${eventUsers.status !== true
                 ? 'bi bi-hand-thumbs-up'
                 : 'bi bi-hand-thumbs-down-fill'
-            }`}
+              }`}
           />
         </button>
       </td>
